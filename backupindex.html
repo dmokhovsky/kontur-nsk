@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 15 Trial Version - http://www.wysiwygwebbuilder.com">
+<link href="base/jquery-ui.min.css" rel="stylesheet">
+<link href="KKKv2.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+
+ <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    .tabs {
+      font-size: 0;
+      max-width: 700px;
+	  height:280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tabs>input[type="radio"] {
+      display: none;
+    }
+
+    .tabs>div {
+      /* скрыть контент по умолчанию */
+      display: none;
+      border: 1px solid #e0e0e0;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+
+    /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+    #tab-btn-1:checked~#content-1,
+    #tab-btn-2:checked~#content-2,
+    #tab-btn-3:checked~#content-3 {
+      display: block;
+    }
+
+    .tabs>label {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      user-select: none;
+      background-color: #556060;
+      border: 1px solid #e0e0e0;
+      padding: 2px 8px;
+      font-size: 26px;
+	  width: 33.3%;
+      line-height: 1.5;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+      cursor: pointer;
+      position: relative;
+      top: 1px;
+    }
+
+    .tabs>label:not(:first-of-type) {
+      border-left: none;
+    }
+
+    .tabs>input[type="radio"]:checked+label {
+      background-color: #000;
+	  color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+	.content-tab{
+	  background-color: #000;
+	  color: #fff;
+	  float: left;
+	}
+  </style>
+
+
+</head>
+<body>
+<div id="Layer1" style="position:relative;text-align:center;width:100%;;height:100%;float:left;display:block;z-index:102;">
+<div  style="position:relative;text-align:left;width:99.8969%;;height:140px;float:left;display:block;z-index:13;background-color: #E9E9E9;">
+<div  style="position:relative;text-align:left;width:37.1134%;;height:140px;float:left;display:block;z-index:4;">
+<div id="wb_Image1" style="display:inline-block;width:358px;height:136px;z-index:0;background-color: #E9E9E9;">
+<img src="images/Clipboard01.jpg" id="Image1" alt="">
+</div>
+</div>
+<div  style="position:relative;text-align:right;width:61.8557%;;height:140px;float:left;display:block;z-index:5;background-color: #E9E9E9;">
+<div  style="display:inline-block;position:relative;text-align:left;width:250px;height:130px;z-index:3;">
+<div id="wb_Shape1" style="position:absolute;left:35px;top:70px;width:180px;height:50px;z-index:1;">
+<img src="images/img0001.png" id="Shape1" alt="" style="width:180px;height:50px;"></div>
+<div id="wb_Text1" style="position:absolute;left:55px;top:30px;width:140px;height:16px;text-align:right;z-index:2;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">+7(999) 123-456-78</span></div>
+</div>
+</div>
+</div>
+<div id="Layer4" style="position:relative;text-align:center;width:100%;;height:45px;float:left;display:block;z-index:37;">
+<div id="wb_TabMenu1" style="display:inline-block;text-align:center;width:100%;height:41px;z-index:3;overflow:hidden;">
+<ul id="TabMenu1">
+<li><a href="#">Главная</a></li>
+<li><a href="#">Каталог</a></li>
+<li><a href="#">Оплата и доставка</a></li>
+<li><a href="#">Контакты</a></li>
+</ul>
+
+</div>
+</div>
+
+<div id="SlideMenu1" style="display:inline-block;vertical-align: top;width:205px;height:516px;z-index:39;">
+<div id="wb_Text1">
+<h2>Каталог</h2>
+</div>
+<ul role="menu">
+   <li class="SlideMenu1_Folder" aria-haspopup="false"><a>Автомобили</a>
+      <ul role="menu" aria-expanded="false">
+         <li><a role="menuitem" href="">Item 1</a></li>
+         <li><a role="menuitem" href="">Item 2</a></li>
+      </ul>
+   </li>
+   <li class="SlideMenu1_Folder" aria-haspopup="true"><a>Бытовая техника</a>
+      <ul role="menu" aria-expanded="false">
+         <li><a role="menuitem" href="">Чайники</a></li>
+         <li><a role="menuitem" href="">Кофйники</a></li>
+         <li><a role="menuitem" href="">Микроволновки</a></li>
+         <li><a role="menuitem" href="">Духовки</a></li>
+         <li><a role="menuitem" href="">Миксеры</a></li>
+      </ul>
+   </li>
+   <li class="SlideMenu1_Folder" aria-haspopup="true"><a>Мобильная техника</a>
+      <ul role="menu" aria-expanded="false">
+         <li><a role="menuitem" href="">Item 3</a></li>
+         <li><a role="menuitem" href="">Item 4</a></li>
+      </ul>
+   </li>
+   <li class="SlideMenu1_Folder" aria-haspopup="true"><a>Компютеры</a>
+      <ul role="menu" aria-expanded="false">
+         <li><a role="menuitem" href="">Item 5</a></li>
+         <li><a role="menuitem" href="">Item 6</a></li>
+         <li><a role="menuitem" href="">Item 11</a></li>
+      </ul>
+   </li>
+   <li class="SlideMenu1_Folder" aria-haspopup="true"><a>Одежда</a>
+      <ul role="menu" aria-expanded="false">
+         <li><a role="menuitem" href="">Item 7</a></li>
+         <li><a role="menuitem" href="">Item 8</a></li>
+      </ul>
+   </li>
+   <li class="SlideMenu1_Folder" aria-haspopup="true"><a>Недвижимость</a>
+      <ul role="menu" aria-expanded="false">
+         <li><a role="menuitem" href="">Item 9</a></li>
+         <li><a role="menuitem" href="">Item 10</a></li>
+      </ul>
+   </li>
+</ul>
+</div>
+<div id="Layer3" style="display:inline-block;position:relative;text-align:left;width:66%;height:1000px;z-index:40;">
+<div id="wb_Text1">
+<h1>ЗАГОЛОВОК</h1>
+</div>
+<div id="Layer8" style="display:inline-block;position:relative;text-align:center;width:220px;height:350px;z-index:29;">
+<div id="wb_Image5" style="display:inline-block;width:205px;height:204px;z-index:4;">
+<img src="images/photoeditorsdk-export (1).png" id="Image5" alt="">
+</div>
+<div id="wb_Text4">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Здесь текста меньше,но тоже интересно.<br><br></span><span style="color:#000000;font-family:Arial;font-size:13px;"><br></span>
+</div>
+<div id="wb_Shape4" style="display:inline-block;width:120px;height:40px;z-index:6;position:relative;">
+<img src="images/img0007.png" id="Shape4" alt="" style="width:120px;height:40px;">
+</div>
+</div>
+<div id="Layer6" style="display:inline-block;position:relative;text-align:center;width:220px;height:350px;z-index:30;">
+<div id="wb_Image4" style="display:inline-block;width:205px;height:204px;z-index:7;">
+<img src="images/photoeditorsdk-export (1).png" id="Image4" alt="">
+</div>
+<div id="wb_Text3">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Здесь текста меньше,но тоже интересно.<br><br></span><span style="color:#000000;font-family:Arial;font-size:13px;"><br></span>
+</div>
+<div id="wb_Shape2" style="display:inline-block;width:120px;height:40px;z-index:9;position:relative;">
+<img src="images/img0002.png" id="Shape2" alt="" style="width:120px;height:40px;">
+</div>
+</div>
+<div id="Layer7" style="display:inline-block;position:relative;text-align:center;width:220px;height:350px;z-index:31;">
+<div id="wb_Image6" style="display:inline-block;width:205px;height:204px;z-index:10;">
+<img src="images/photoeditorsdk-export (1).png" id="Image6" alt="">
+</div>
+<div id="wb_Text5">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Здесь текста меньше,но тоже интересно.<br><br></span><span style="color:#000000;font-family:Arial;font-size:13px;"><br></span>
+</div>
+<div id="wb_Shape3" style="display:inline-block;width:120px;height:40px;z-index:12;position:relative;">
+<img src="images/img0003.png" id="Shape3" alt="" style="width:120px;height:40px;">
+</div>
+</div>
+<div id="Layer9" style="display:inline-block;position:relative;text-align:center;width:220px;height:350px;z-index:32;">
+<div id="wb_Image7" style="display:inline-block;width:205px;height:204px;z-index:13;">
+<img src="images/photoeditorsdk-export (1).png" id="Image7" alt="">
+</div>
+<div id="wb_Text6">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Здесь текста меньше,но тоже интересно.<br><br></span><span style="color:#000000;font-family:Arial;font-size:13px;"><br></span>
+</div>
+<div id="wb_Shape5" style="display:inline-block;width:120px;height:40px;z-index:15;position:relative;">
+<img src="images/img0004.png" id="Shape5" alt="" style="width:120px;height:40px;">
+</div>
+</div>
+<div id="Layer10" style="display:inline-block;position:relative;text-align:center;width:220px;height:350px;z-index:33;">
+<div id="wb_Image8" style="display:inline-block;width:205px;height:204px;z-index:16;">
+<img src="images/photoeditorsdk-export (1).png" id="Image8" alt="">
+</div>
+<div id="wb_Text7">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Здесь текста меньше,но тоже интересно.<br><br></span><span style="color:#000000;font-family:Arial;font-size:13px;"><br></span>
+</div>
+<div id="wb_Shape6" style="display:inline-block;width:120px;height:40px;z-index:18;position:relative;">
+<img src="images/img0005.png" id="Shape6" alt="" style="width:120px;height:40px;">
+</div>
+</div>
+<div id="Layer5" style="display:inline-block;position:relative;text-align:center;width:220px;height:350px;z-index:34;">
+<div id="wb_Image2" style="display:inline-block;width:205px;height:204px;z-index:19;">
+<img src="images/photoeditorsdk-export (1).png" id="Image2" alt="">
+</div>
+<div id="wb_Text2">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Здесь текста меньше,но тоже интересно.<br><br></span><span style="color:#000000;font-family:Arial;font-size:13px;"><br></span>
+</div>
+<div id="wb_Shape1" style="display:inline-block;width:120px;height:40px;z-index:21;position:relative;">
+<img src="images/img0001.png" id="Shape1" alt="" style="width:120px;height:40px;">
+</div>
+</div>
+
+
+  <div class="tabs">
+    <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+    <label for="tab-btn-1">Вкл 1</label>
+    <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+    <label for="tab-btn-2">Вкладка 2</label>
+    <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+    <label for="tab-btn-3">Вкладка 3</label>
+
+    <div id="content-1" class="content-tab">
+		<div style="display:inline-block;width:205px;height:204px;z-index:7;float:left;">
+			<img src="images/photoeditorsdk-export (1).png" id="Image4" alt="">
+		</div>
+		Обратите внимание, когда вы уменьшаете размер окна браузера, вкладки автоматом подстраиваются под текущий размер до определённого значения
+    </div>
+    <div id="content-2" class="content-tab">
+		<div style="display:inline-block;width:205px;height:204px;z-index:7;float:left;">
+			<img src="images/photoeditorsdk-export (1).png" id="Image4" alt="">
+		</div>
+		Элемент не предназначен для инструмента компоновки! Они будут приносить беспорядок в ваш код. И представьте, как трудно будет редизайн вашего сайта через пару месяцев.
+    </div>
+    <div id="content-3" class="content-tab">
+		<div style="display:inline-block;width:205px;height:204px;z-index:7;float:left;">
+			<img src="images/photoeditorsdk-export (1).png" id="Image4" alt="">
+		</div>
+		Использование Flexbox гарантирует, что элементы ведут себя предсказуемо, когда макет страницы должен вместить различные размеры экрана и различные устройства отображения. Недостатки: не работает в IE10 и более ранних версиях.
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+
+</body>
+</html>
